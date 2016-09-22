@@ -1,8 +1,8 @@
 {
-  "name": "my-app",
+  "name": "JuhoAPP",
   "description": "My first Tabris.js app",
   "main": "src/script.js",
   "dependencies": {
-    "tabris": "0.9.3"
+    "tabris": "1.0.0"
   }
 }
