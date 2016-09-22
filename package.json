@@ -1,8 +1,9 @@
 {
-  "name": "JuhoAPP",
-  "description": "My first Tabris.js app",
+  "title": "script",
+  "description": "Tabris.js - script",
+  "category": "Small Apps",
   "main": "src/script.js",
   "dependencies": {
-    "tabris": "0.9.3"
+    "tabris": "^1.7.0"
   }
 }
