@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget
-    id=juho.app"
-    version="1.0.0"></widget>
+    id="juho.app" version="1.0.0">
     <name>Juhon testiaplikaatio</name>
     <description>
        Moi
