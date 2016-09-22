@@ -1,11 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget
-    id="my.first.app"
-    version="1.0.0"
-    xmlns:gap="http://phonegap.com/ns/1.0"
-    xmlns="http://www.w3.org/ns/widgets"
-    xmlns:cdv="http://cordova.apache.org/ns/1.0">
- 
+    id=juho.app"
+    version="1.0.0"></widget>
     <name>Juhon testiaplikaatio</name>
     <description>
        Moi
@@ -13,8 +9,4 @@
     <author email="me@me.com" href="http://www.me.me">
         Me
     </author>
- 
-    <access origin="*" />
- 
-    <preference name="EnableDeveloperConsole" value="true"/>
 </widget>
