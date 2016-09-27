@@ -126,6 +126,7 @@ var toggle = new tabris.TextView({
 }).appendTo(CLICKER);
 
 function timeri(widget) {
+
   if (time == "0") {
       button.set({text: "Your points: " + count, font: "25px"});
       toggle.set("text", "0");
@@ -139,5 +140,16 @@ function point(widget) {
   if (time >= "1") {
      button.set({text: (++count)});
  }
+  if (count == "175") {
+    	timer.set("text", (time = "30"));
+  }
+  if (count == "425") {
+    	timer.set("text", (time = "30"));
+  }
+  if (count == "675") {
+    	timer.set("text", (time = "40"));
+  }
+  if (count == "1000") {
+    	timer.set("text", (time = "60"));
+  }
 }
-      
