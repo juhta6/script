@@ -24,6 +24,13 @@ var CATS = new tabris.Page({
   topLevel: true
 });
 
+var Games = new tabris.Button({
+  layoutData: {centerX: 0, top: 10},
+  text: "Back"
+}).on("select", function(button) {
+  mainmenu.open();
+}).appendTo(CATS);
+
 var CLICKER = new tabris.Page({
   title: "CLICKER",
   topLevel: true
@@ -34,7 +41,7 @@ var Games = new tabris.Button({
   text: "Back"
 }).on("select", function(button) {
   mainmenu.open();
-}).appendTo(CLICKER,CATS);
+}).appendTo(CLICKER);
 
 var textView = new tabris.TextView({
   layoutData: {left: 10, right: 10, top: "5%"},
