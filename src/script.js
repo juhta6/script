@@ -1,21 +1,47 @@
-var page = new tabris.Page({
-  title: "CATS",
+var mainmenu = new tabris.Page({
+  title: "Games",
   topLevel: true
 });
 
-var Games = new tabris.Button({
-  layoutData: {centerX: 0, top: 5},
-  text: "Games"
+var bCATS = new tabris.Button({
+  layoutData: {left: 40, centerY: 0},
+  text: "CATS"
 }).on("select", function(button) {
-  page1.open();
-}).appendTo(page);
+  CATS.open();
+}).appendTo(mainmenu);
+
+var bCLICKER = new tabris.Button({
+  layoutData: {left: 60, centerY: 0},
+  text: "CLICKER"
+}).on("select", function(button) {
+  CLICKER.open();
+}).appendTo(mainmenu);
+
+mainmenu.open();
+
+var CATS = new tabris.Page({
+  title: "Games",
+  topLevel: true
+});
+
+var CLICKER = new tabris.Page({
+  title: "CLICKER",
+  topLevel: true
+})
+
+var Games = new tabris.Button({
+  layoutData: {centerX: 0, top: 10},
+  text: "Back"
+}).on("select", function(button) {
+  mainmenu.open();
+}).appendTo(CLICKER,CATS);
 
 var textView = new tabris.TextView({
   layoutData: {left: 10, right: 10, top: "5%"},
   alignment: "center",
   font: "22px sans-serif",
   text: "50"
-}).appendTo(page);
+}).appendTo(CATS);
 
 var touched = 0;
 var imageView = new tabris.ImageView({
@@ -36,7 +62,7 @@ var imageView = new tabris.ImageView({
     repeat: 3,
     easing: "ease-out"
   });
-}).appendTo(page);
+}).appendTo(CATS);
 
 var slider1 = new tabris.Slider({
   layoutData: {left: 50, top: [textView, 5], right: 50},
@@ -46,7 +72,7 @@ var slider1 = new tabris.Slider({
 }).on("change:selection", function(slider, selection) {
   imageView.set("layoutData", {centerX: 0, centerY: 0, width: selection, height: selection});
   textView.set("text", selection);
-}).appendTo(page);
+}).appendTo(CATS);
 var slider2 = new tabris.Slider({
   layoutData: {left: 50, top: 420, right: 50},
   minimum: 0,
@@ -58,14 +84,7 @@ var slider2 = new tabris.Slider({
       rotation: selection * Math.PI / 180
     }
   });
-}).appendTo(page);
-
-page.open();
-
-var page1 = new tabris.Page({
-  title: "Peli",
-  topLevel: true
-})
+}).appendTo(CATS);
 
 var count = 0;
 var time = -1;
@@ -75,7 +94,7 @@ var timer = new tabris.TextView({
   layoutData: {top: 10, right: 10},
   text: "",
   alignment: "right"
-}).appendTo(page1);
+}).appendTo(CLICKER);
 
 var button = new tabris.Button({
   layoutData: {centerX: 0, top: 56, height: 450, width: 350},
@@ -83,7 +102,7 @@ var button = new tabris.Button({
   font: "50px"
 }).on("select", function(widget) {
   	point(widget)
-}).appendTo(page1);
+}).appendTo(CLICKER);
 
 var start = new tabris.ToggleButton({
   layoutData: {left: 10, top: 10, width: 57},
@@ -92,19 +111,12 @@ var start = new tabris.ToggleButton({
 }).once("change:selection", function(widget, button, selection) {
   setInterval(timeri, 1000, widget);
   timer.set("text", (time = "30"));
-}).appendTo(page1);
+}).appendTo(CLICKER);
 
 var toggle = new tabris.TextView({
   layoutData: {centerX: 0, top: -200},
   text: "0"
-}).appendTo(page1);
-
-var Games = new tabris.Button({
-  layoutData: {centerX: 0, top: 10},
-  text: "Games"
-}).on("select", function(button) {
-  page.open();
-}).appendTo(page1);
+}).appendTo(CLICKER);
 
 function timeri(widget) {
   if (time == "0") {
@@ -121,8 +133,4 @@ function point(widget) {
      button.set({text: (++count)});
  }
 }
-      
-      
-      
-      
       
