@@ -4,7 +4,7 @@ var page = new tabris.Page({
 });
 
 var Games = new tabris.Button({
-  layoutData: {centerX: 0, top: 500},
+  layoutData: {centerX: 0, top: 5},
   text: "Games"
 }).on("select", function(button) {
   page1.open();
@@ -100,7 +100,7 @@ var toggle = new tabris.TextView({
 }).appendTo(page1);
 
 var Games = new tabris.Button({
-  layoutData: {centerX: 0, top: 500},
+  layoutData: {centerX: 0, top: 10},
   text: "Games"
 }).on("select", function(button) {
   page.open();
