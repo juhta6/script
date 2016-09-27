@@ -4,14 +4,14 @@ var mainmenu = new tabris.Page({
 });
 
 var bCATS = new tabris.Button({
-  layoutData: {left: 40, centerY: 0},
+  layoutData: {left: 90, centerY: 0},
   text: "CATS"
 }).on("select", function(button) {
   CATS.open();
 }).appendTo(mainmenu);
 
 var bCLICKER = new tabris.Button({
-  layoutData: {left: 60, centerY: 0},
+  layoutData: {left: 190, centerY: 0},
   text: "CLICKER"
 }).on("select", function(button) {
   CLICKER.open();
@@ -20,7 +20,7 @@ var bCLICKER = new tabris.Button({
 mainmenu.open();
 
 var CATS = new tabris.Page({
-  title: "Games",
+  title: "CATS",
   topLevel: true
 });
 
