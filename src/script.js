@@ -86,7 +86,7 @@ var button = new tabris.Button({
 }).appendTo(page1);
 
 var start = new tabris.ToggleButton({
-  layoutData: {left: 10, top: 10, width: 55},
+  layoutData: {left: 10, top: 10, width: 57},
   text: "Start",
   selection: true
 }).once("change:selection", function(widget, button, selection) {
