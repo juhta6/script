@@ -3,6 +3,14 @@ var mainmenu = new tabris.Page({
   topLevel: true
 });
 
+new tabris.Button({
+  layoutData: {centerX: 0, bottom: 32},
+  text: "Reload"
+}).on("select", function() {
+  tabris.app.reload();
+}).appendTo(mainmenu);
+
+
 var bCATS = new tabris.Button({
   layoutData: {left: 90, centerY: 0},
   text: "CATS"
