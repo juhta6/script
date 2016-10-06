@@ -104,10 +104,12 @@ var slider2 = new tabris.Slider({
 var count = 0;
 var time = -1;
 var toggle = 0;
+var timing = setInterval(timeria, 1000, widget);
 
 var timer = new tabris.TextView({
   layoutData: {top: 10, right: 10},
   text: "",
+  font: "30px"
   alignment: "right"
 }).appendTo(CLICKER);
 
@@ -123,9 +125,8 @@ var start = new tabris.ToggleButton({
   layoutData: {left: 10, top: 10, width: 57},
   text: "Start",
   selection: true
-}).once("change:selection", function(widget, button, selection) {
-  setInterval(timeri, 1000, widget);
-  timer.set("text", (time = "30"));
+}).on("change:selection", function(widget, button, selection) {
+  timeria(widget)
 }).appendTo(CLICKER);
 
 var toggle = new tabris.TextView({
@@ -133,10 +134,16 @@ var toggle = new tabris.TextView({
   text: "0"
 }).appendTo(CLICKER);
 
+function timeria(widget) {
+  if (timing = "true") {
+  timeri(widget)
+  } else {
+    timing = "false"
+  }
+ }
 function timeri(widget) {
-
   if (time == "0") {
-      button.set({text: "Your points: " + count, font: "25px"});
+      button.set({text: "Your points: " + count, font: "50px"});
       toggle.set("text", "0");
   } else {
     toggle.set("text", "1");
@@ -144,18 +151,19 @@ function timeri(widget) {
     timer.set("text", (--time));
   }
 }
+
 function point(widget) {
   if (time >= "1") {
-     button.set({text: (++count)});
+     button.set({text: (++count), font: "50px"});
  }
-  if (count == "175") {
+  if (count == "150") {
     	timer.set("text", (time = "30"));
   }
-  if (count == "425") {
+  if (count == "375") {
     	timer.set("text", (time = "30"));
   }
-  if (count == "675") {
-    	timer.set("text", (time = "40"));
+  if (count == "555") {
+    	timer.set("text", (time = "50"));
   }
   if (count == "1000") {
     	timer.set("text", (time = "60"));
